@@ -1,4 +1,4 @@
-﻿Part 1
+﻿Sesión 1
  - Crear Solucion
  - Limpiar proyectos
  - Agregar font quicksand
