@@ -27,7 +27,23 @@ https://ticapacitacion.com/resources/courses/blazorwasm/imagespizzas.zip
 
 
 Sesión 3
+error Microsoft.TypeScript.MSBuild
+ *Los enlaces que NO empiezan con / se asocian al <base href="/" /> de index.html
+ - app.css apartir de .top-bar
+ - modificar index.razor -CLIENT
+ Backup .zip del proyecto
+ - class Pizza, PizzaTopping, Topping -SHARED
+ - Modificar PizzaStoreContext -SERVER
+ - Add-Migration and Update-Database
+ - agregar Componente Razor ConfigurePizzaDialog
+ - app.css apartir de form
+ - 
+
+https://ticapacitacion.com/resources/courses/blazorwasm/images/logo.svg
+https://ticapacitacion.com/resources/courses/blazorwasm/images/pizza-slice.svg
 
 
-
+Sesión 4
+ -
+ -
 

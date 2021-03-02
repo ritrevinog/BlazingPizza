@@ -19,6 +19,20 @@ namespace BlazingPizza.Server.Models
             : base(options) { }
 
         public DbSet<PizzaSpecial> Specials { get; set; }
+        public DbSet<Topping> Toppings { get; set; }
+        public DbSet<Pizza> Pizzas { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            // Fluent API
+            modelBuilder.Entity<PizzaTopping>()
+                .HasKey(pst => new { pst.PizzaId, pst.ToppingId });
+
+            modelBuilder.Entity<PizzaTopping>()
+                .HasOne<Pizza>().WithMany(ps => ps.Toppings);
+
+            modelBuilder.Entity<PizzaTopping>()
+                .HasOne(pst => pst.Topping).WithMany();
+        }
     }
 }
