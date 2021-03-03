@@ -52,6 +52,17 @@ https://ticapacitacion.com/resources/courses/blazorwasm/images/pizza-slice.svg
 
 
 Sesión 4
- -
- -
+ - agregar ToppingsController
+ - agregar Codigo para Toppings ConfigurePizzaDialog.razor
+ - agregar Styles app.css
+ - modifcar index.razor -CLIENTE
+ - 
+
+
+
+
+Sesión 5
+
+
+
 

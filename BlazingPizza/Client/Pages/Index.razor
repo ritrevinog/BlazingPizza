@@ -22,7 +22,8 @@
 
 @if (ShowingConfigureDialog)
 {
-    <ConfigurePizzaDialog Pizza="ConfiguringPizza" /> 
+    <ConfigurePizzaDialog Pizza="ConfiguringPizza"
+                    OnCancel="CancelConfigurePizzaDialog" /> 
 }
 
 @code {
@@ -48,4 +49,9 @@
         ShowingConfigureDialog = true;
     }
 
+    void CancelConfigurePizzaDialog()
+    {
+        ConfiguringPizza = null;
+        ShowingConfigureDialog = false;
+    }
 }
