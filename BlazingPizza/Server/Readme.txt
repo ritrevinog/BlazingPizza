@@ -37,10 +37,18 @@ error Microsoft.TypeScript.MSBuild
  - Add-Migration and Update-Database
  - agregar Componente Razor ConfigurePizzaDialog
  - app.css apartir de form
- - 
+ - Modificar ConfigurePizzaDialog.razor -CLIENTE
 
 https://ticapacitacion.com/resources/courses/blazorwasm/images/logo.svg
 https://ticapacitacion.com/resources/courses/blazorwasm/images/pizza-slice.svg
+
+*Referencia ConfigurePizzaDialog.razor
+<input type="range" 
+    min="@Pizza.MinimumSize" 
+    max="@Pizza.MaximumSize" 
+    step="@Pizza.IncrementSize" 
+    value="@Pizza.Size"
+    @onchange="@((ChangeEventArgs e) => Pizza.Size = int.Parse((string)e.Value))" />
 
 
 Sesión 4
