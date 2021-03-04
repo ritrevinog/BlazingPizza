@@ -21,6 +21,7 @@ namespace BlazingPizza.Server.Models
         public DbSet<PizzaSpecial> Specials { get; set; }
         public DbSet<Topping> Toppings { get; set; }
         public DbSet<Pizza> Pizzas { get; set; }
+        public DbSet<Order> Orders { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -33,6 +34,10 @@ namespace BlazingPizza.Server.Models
 
             modelBuilder.Entity<PizzaTopping>()
                 .HasOne(pst => pst.Topping).WithMany();
+
+            // Relación 1<=>1
+            modelBuilder.Entity<Order>()
+                .OwnsOne(o => o.DeliveryLocation);
         }
     }
 }

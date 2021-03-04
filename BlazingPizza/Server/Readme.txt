@@ -58,11 +58,11 @@ Sesión 4
  - modifcar index.razor -CLIENTE
  - 
 
-
-
-
 Sesión 5
-
+ - Nueva Class Address, LatLong, Order
+ - Add-Migration 
+ - Nuevo OrdersController.cs
+ - 
 
 
 
