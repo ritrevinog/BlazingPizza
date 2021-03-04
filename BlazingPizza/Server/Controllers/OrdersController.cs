@@ -40,7 +40,7 @@ namespace BlazingPizza.Server.Controllers
             Context.Orders.Attach(order);
             await Context.SaveChangesAsync();
 
-            return order.Id;
+            return order.OrderId;
         }
     }
 }
