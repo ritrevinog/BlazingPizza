@@ -35,7 +35,7 @@
     }
     else
     {
-        <div class="empty-cart">Selecciona unav pizza <br />pparam empezar</div>
+        <div class="empty-cart">Selecciona una pizza <br />para empezar</div>
     }
     <div class="order-total @(Order.Pizzas.Any()?"":"hidden")">
         Total:
@@ -48,10 +48,7 @@
 
 @if(ShowingConfigureDialog)
 {
-    <ConfigurePizzaDialog 
-        Pizza="ConfiguringPizza" 
-        OnCancel="CancelConfigurePizzaDialog"
-        OnConfirm="ConfirmConfigurePizzaDialog" />
+    <ConfigurePizzaDialog Pizza="ConfiguringPizza" OnCancel="CancelConfigurePizzaDialog" OnConfirm="ConfirmConfigurePizzaDialog" />
 }
 
 @code {
@@ -98,7 +95,7 @@
 
     async Task PlaceOrder()
     {
-        await HttpClient.PostAsJsonAsync("orders", Order);
+        await HttpClient.PostAsJsonAsync("api/orders", Order);
         Order = new Order();
     }
 

@@ -62,7 +62,11 @@ Sesión 5
  - Nueva Class Address, LatLong, Order
  - Add-Migration 
  - Nuevo OrdersController.cs
- - 
+ - CSS .car-item  1:05:00
+ - 21 Toppings 1:49:34
+ - image https://ticapacitacion.com/resources/courses/blazorwasm/images/bike.svg
+ - page: MyOrders, modificar MainLayout.razor
+ - New Proyecto BlazingPizza.ComponentsLibrary
 
 
 

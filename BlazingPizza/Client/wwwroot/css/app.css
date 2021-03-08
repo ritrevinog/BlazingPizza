@@ -493,7 +493,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     margin-right: 0.3rem;
 }
 
-.sidebar {
+.side-bar {
     background-color: #2b2b2b;
     width: 20rem;
     display: flex;
@@ -525,7 +525,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 }
 
 .order-total {
-    background-color: rgb(191,52,52);
+    background-color: rgb(191, 52, 52);
     height: 4rem;
     flex-shrink: 0;
     display: flex;
@@ -540,3 +540,22 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 .order-total .hidden {
     transform: translate3d(0, 4rem, 0);
 }
+
+.order-total .total-price {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.order-total .total-price::before {
+    content: '$';
+    font-weight: 300;
+    margin: 0 0.1rem 0 0.4rem;
+}
+
+.order-total .btn {
+    margin-left: auto;
+    font-weight: 700;
+    border-radius: 20px;
+    padding: 0.4rem 1.2rem;
+}
+
