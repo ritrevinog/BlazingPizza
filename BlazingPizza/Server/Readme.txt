@@ -69,4 +69,14 @@ Sesión 5
  - New Proyecto BlazingPizza.ComponentsLibrary
 
 
+Sesión 6
+ - New class OrderWithStatus -SHARED
+ - Order Controller new class HttpGet
+ - Terminar MyOrders.razor
+ - Agregar Estilos CSS apartir de: .orders-list .list-group-item
+
+
+Sesión 7
+ - 
+
 
