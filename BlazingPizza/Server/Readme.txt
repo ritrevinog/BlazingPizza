@@ -77,6 +77,15 @@ Sesión 6
 
 
 Sesión 7
+ - Creando componentes reutilizables en Blazor (Table)
+
+Sesión 8
+ - Creando componentes reutilizables en Blazor (Select)
+
+Sesión 9
+ - Nuevo componente OrderDetails.razor
+ - Nuevo Metodo GET en OrdersController GetOrderWithStatus
+ - mas Estilos .track-order
  - 
 
 
