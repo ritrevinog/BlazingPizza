@@ -93,4 +93,8 @@ Sesión 10
  - Agregar estilos CSS apartir de: track-order-details
  - Order.cs new GetFormattedCreatedTime Propierty
  - index.razor modified Method PlaceOrder
- - 
+ - final capitulo 4 commit y push
+ - new folder Services
+ - new Class OrderState que es el AppState
+ - proyect Client program.cs new line : builder.Services.AddScoped<OrderState>();
+ - mover todos los metodos de Index a OrderState
