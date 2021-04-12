@@ -1,7 +1,7 @@
 ﻿@page "/myorders/{orderid:int}"
 @inject HttpClient HttpClient
 @using System.Threading
-
+@implements IDisposable
 
 <div class="main">
     @if (InvalidOrder)
@@ -18,11 +18,13 @@
     {
         <div class="track-order">
             <div class="track-order-title">
-                <h2>Pedido realizado @OrderWithStatus.Order.CreatedTime.ToLongDateString()</h2>
+                <h2>Pedido realizado @OrderWithStatus.Order.GetFormattedCreatedTime()</h2>
                 <p class="ml-auto mb-0">Estatus: <strong>@OrderWithStatus.StatusText</strong></p>
             </div>
             <div class="track-order-body">
-                Mostrar más detalle ...
+                <div class="track-order-details">
+                    <OrderReview Order="OrderWithStatus.Order" />
+                </div>
             </div>
         </div>
     }
@@ -44,6 +46,11 @@
         PollForUpdates();
     }
 
+    void IDisposable.Dispose()
+    {
+        PollingCancelationToken?.Cancel();
+    }
+
     private async void PollForUpdates()
     {
         PollingCancelationToken = new CancellationTokenSource();
@@ -54,6 +61,11 @@
                 InvalidOrder = false;
                 OrderWithStatus = 
                     await HttpClient.GetFromJsonAsync<OrderWithStatus>($"api/orders/{OrderId}");
+
+                if (OrderWithStatus.StatusText == "Entregado")
+                {
+                    PollingCancelationToken.Cancel();
+                }
             }
             catch(Exception ex)
             {

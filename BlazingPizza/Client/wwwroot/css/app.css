@@ -609,3 +609,11 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     display: flex;
 }
 
+.track-order-details {
+    overflow-y: auto;
+    padding: 1.5rem 3rem;
+    flex-grow: 1;
+}
+
+
+

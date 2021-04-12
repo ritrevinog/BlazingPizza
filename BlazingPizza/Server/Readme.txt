@@ -88,4 +88,9 @@ Sesión 9
  - mas Estilos .track-order
  - 
 
-
+Sesión 10
+ - Nuevo componente OrderReview.razor
+ - Agregar estilos CSS apartir de: track-order-details
+ - Order.cs new GetFormattedCreatedTime Propierty
+ - index.razor modified Method PlaceOrder
+ - 
