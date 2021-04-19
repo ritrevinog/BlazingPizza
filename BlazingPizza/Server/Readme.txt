@@ -98,3 +98,11 @@ Sesión 10
  - new Class OrderState que es el AppState
  - proyect Client program.cs new line : builder.Services.AddScoped<OrderState>();
  - mover todos los metodos de Index a OrderState
+
+Sesión 11
+ - new component Checkout / PAGES
+ - new css apartir de checkout
+ - modificar el index.razor
+ - nuevo componente AddressEditor / SHARED
+ - 
+
