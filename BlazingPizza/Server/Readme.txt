@@ -86,7 +86,6 @@ Sesión 9
  - Nuevo componente OrderDetails.razor
  - Nuevo Metodo GET en OrdersController GetOrderWithStatus
  - mas Estilos .track-order
- - 
 
 Sesión 10
  - Nuevo componente OrderReview.razor
@@ -104,5 +103,14 @@ Sesión 11
  - new css apartir de checkout
  - modificar el index.razor
  - nuevo componente AddressEditor / SHARED
- - 
+ - Fin de la lección 6
+ Agregar Autenticación y Autorización
+ - [Authorize] en OrdersController.cs
+ - UserInfo Class on SHARED
+ - nuget Authentication Twitter
+ - new UserController
+ - Startup new Services AddAuthentication
+ - cambiar puerto http://localhost:64589
 
+Sesión 12
+ - 

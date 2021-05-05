@@ -1,5 +1,6 @@
 ﻿using BlazingPizza.Server.Models;
 using BlazingPizza.Shared;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -12,6 +13,7 @@ namespace BlazingPizza.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class OrdersController : ControllerBase
     {
         private readonly PizzaStoreContext Context;
@@ -21,6 +23,7 @@ namespace BlazingPizza.Server.Controllers
             Context = context;
         }
 
+        #region EndPoints
         [HttpPost]
         public async Task<ActionResult<int>> PlaceOrder(Order order)
         {
@@ -74,5 +77,7 @@ namespace BlazingPizza.Server.Controllers
             else
                 return OrderWithStatus.FromOrder(order);
         }
+
+        #endregion
     }
 }
